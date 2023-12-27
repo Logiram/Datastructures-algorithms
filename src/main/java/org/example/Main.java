@@ -29,6 +29,7 @@ class Main{//insert node in beginning
         temp=newnode;
         return head;
     }
+
     //search element of the node is present(true/false)
     boolean searchelement(Node node,int value){
         Node current =node;
