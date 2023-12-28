@@ -41,9 +41,10 @@ public class SingleLeasypblm {
                     btemp = btemp.next;
                     result = "identical";
                 }
-                else
-                    result="not identical";
+                else {
+                    result = "not identical";
                     break;
+                }
 
         }
         return result;
