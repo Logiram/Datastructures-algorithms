@@ -49,6 +49,29 @@ ie., num[num[0]]
             return ans;
         }
 
+  /* number of good pairs
+eg:
+i/p  num= [1,2,3,1,1,3]
+o/p ans = 4
+ie., 1. traverse the array using 2 for loops (i and J)
+2. check condition if num[i]==num[j] and i<j
+
+ */
+
+    public int numIdenticalPairs(int[] nums){
+
+        int count=0;
+        int numslength=arraylength(nums);
+        for(int i=0;i<numslength;i++){
+            for(int j=0;j<numslength;j++){
+                if(nums[i]==nums[j] && i<j){
+                    count++;
+                }
+
+            }
+        }
+        return count;
+    }
 
 
        int arraylength(int[] arr){
@@ -69,10 +92,12 @@ ie., num[num[0]]
 
         public static void main(String a[]){
             Arrays arr= new Arrays();
-            int[] ans= {5,0,1,2,3,6};
+            int[] ans= {1,1,1,1};
            // int[] finals= arr.getConcatenation(ans);
-            int[] finalperarray=arr.buildpermutationarray(ans);
-            arr.printarray(finalperarray);
+           // int[] finalperarray=arr.buildpermutationarray(ans);
+            int identicalpair=arr.numIdenticalPairs(ans);
+            System.out.println(identicalpair);
+            //arr.printarray(identicalpair);
         }
 
 
